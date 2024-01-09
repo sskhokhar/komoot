@@ -1,16 +1,30 @@
+import './global.css';
+
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import NxWelcome from './nx-welcome';
+import Map from './components/map/index';
+import Panel from './components/panel';
+import { RouteDataProvider } from './providers/RouteDataContext';
 
 const StyledApp = styled.div`
-  // Your style here
+  display: flex;
+  height: 100vh;
 `;
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="komoot-planner" />
-    </StyledApp>
+    <>
+      <Helmet>
+        <title>Route Planner | Komoot</title>
+      </Helmet>
+      <RouteDataProvider>
+        <StyledApp>
+          <Panel />
+          <Map />
+        </StyledApp>
+      </RouteDataProvider>
+    </>
   );
 }
 
