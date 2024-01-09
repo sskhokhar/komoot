@@ -29,7 +29,10 @@ export default function Panel() {
     <PanelContainer>
       <div>
         <Title>Route Planner</Title>
-        <StyledDragDropList list={points} onReOrder={(e: any) => setPoints(e)}>
+        <StyledDragDropList
+          list={points}
+          onReOrder={(e: number[][]) => setPoints(e)}
+        >
           {points.map((x, i) => (
             <StyledDragDropItem key={i}>
               <Left>

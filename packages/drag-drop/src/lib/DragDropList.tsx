@@ -1,6 +1,5 @@
-import { DragEvent, ReactNode, useEffect,useRef, useState } from 'react';
+import { DragEvent, ReactNode, useEffect, useRef, useState } from 'react';
 
-/* eslint-disable-next-line */
 export interface DragDropListProps<T> {
   children?: ReactNode;
   className?: string;

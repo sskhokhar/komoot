@@ -1,9 +1,10 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'; // for additional matchers
-import Panel from '.';
+
+import { fireEvent, render, screen } from '@testing-library/react';
+
 import * as RouteProviderContext from '../../providers/RouteDataContext';
 import * as Utils from '../../utils';
+import Panel from '.';
 
 // Mock the useRouteData hook
 jest.mock('../../providers/RouteDataContext', () => ({

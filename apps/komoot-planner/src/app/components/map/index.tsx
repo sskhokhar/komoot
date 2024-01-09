@@ -1,5 +1,6 @@
 import { Map as KomootMap } from '@komoot/map';
 import L from 'leaflet';
+
 import { useRouteData } from '../../providers/RouteDataContext';
 
 export default function Map() {

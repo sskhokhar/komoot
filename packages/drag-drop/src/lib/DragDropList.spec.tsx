@@ -1,6 +1,7 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+
+import { fireEvent, render } from '@testing-library/react';
+
 import { DragDropList } from './DragDropList';
 
 describe('DragDropList Component', () => {
@@ -18,7 +19,6 @@ describe('DragDropList Component', () => {
 
     const item1 = getByText('Item 1');
     const item2 = getByText('Item 2');
-    const item3 = getByText('Item 3');
 
     fireEvent.dragStart(item1);
     fireEvent.dragEnter(item2);
