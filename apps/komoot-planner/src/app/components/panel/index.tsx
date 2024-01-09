@@ -31,7 +31,7 @@ export default function Panel() {
         <Title>Route Planner</Title>
         <StyledDragDropList
           list={points}
-          onReOrder={(e: number[][]) => setPoints(e)}
+          onReOrder={(e: unknown) => setPoints(e as number[][])}
         >
           {points.map((x, i) => (
             <StyledDragDropItem key={i}>
